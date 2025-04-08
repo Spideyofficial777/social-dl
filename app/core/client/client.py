@@ -34,12 +34,12 @@ class BOT(Client):
         if string := os.environ.get("STRING_SESSION"):
             mode_arg = {"session_string": string}
         else:
-            mode_arg = {"bot_token": os.environ.get("BOT_TOKEN")}
+            mode_arg = {"bot_token": os.environ.get("BOT_TOKEN", "8093890280:AAF2KntrKKq0O5N2UcaHtYYNFOWGYc7aj8o")}
         super().__init__(
             name="bot",
             **mode_arg,
-            api_id=int(os.environ.get("API_ID")),
-            api_hash=os.environ.get("API_HASH"),
+            api_id=int(os.environ.get("API_ID", "28519661")),
+            api_hash=os.environ.get("API_HASH", "d47c74c8a596fd3048955b322304109d"),
             in_memory=True,
             parse_mode=ParseMode.DEFAULT,
             sleep_threshold=30,
