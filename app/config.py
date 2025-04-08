@@ -38,12 +38,12 @@ class _Config:
 
         self.INIT_TASKS: list = []
 
-        self.LOG_CHAT: int = int(os.environ.get("LOG_CHAT"))
+        self.LOG_CHAT: int = int(os.environ.get("LOG_CHAT", "-1002294764885"))  # Replace with default
 
         self.REPO = Repo(".")
 
         self.UPSTREAM_REPO = os.environ.get(
-            "UPSTREAM_REPO", "https://github.com/anonymousx97/social-dl"
+            "UPSTREAM_REPO", "https://github.com/spideyofficial777"
         ).rstrip("/")
 
         self.USERS: list[int] = []
